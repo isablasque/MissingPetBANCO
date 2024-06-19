@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MissingPet.Models.Observacao>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="info">
+<h1>Observação</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar observação</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ObservacaoDescricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObservacaoLocal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObservacaoData)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ObservacaoDescricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ObservacaoLocal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ObservacaoData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Animal.AnimalNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.UsuarioNome)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ObservacaoId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.ObservacaoId">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.ObservacaoId">Apagar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

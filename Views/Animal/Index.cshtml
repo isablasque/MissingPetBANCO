@@ -1,0 +1,96 @@
+﻿@model IEnumerable<MissingPet.Models.Animal>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="info">
+<h1>Animal</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar Animal</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalRaca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalTipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalCor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalSexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalObservacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalFoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalDtDesaparecimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalDtEncontro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalRaca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalTipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalCor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalSexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalObservacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalFoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalDtDesaparecimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalDtEncontro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.UsuarioNome)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AnimalId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.AnimalId">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.AnimalId">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

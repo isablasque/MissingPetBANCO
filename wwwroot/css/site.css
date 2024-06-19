@@ -1,0 +1,95 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    background-color: #F9F5F4;
+    font-family: Arial;
+    margin-bottom: 60px;
+}
+
+.linha {
+    background-color: black;
+    height: 20px;
+    width: 100%;
+}
+
+.imghome {
+    height: 168.4px;
+    width: 312px;
+    margin-top: 50px;
+}
+
+.navbar-nav {
+    padding-top:10px;
+    padding-bottom: 10px;
+    width: 100%;
+    justify-content: space-around !important;
+}
+.navbar-light .navbar-nav .nav-link {
+    justify-content: space-around !important;
+    font-weight: 600;
+    font-size: large;
+    color: black;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #5D5D5D !important;
+}
+
+a {
+    color: #5D5D5D;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #191617 !important;
+    }
+
+.info {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #A6A6A6;
+    color: black;
+    margin-top: 50px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.20rem #A6A6A6 !important;
+    background-color: whitesmoke !important;
+    border-color: #727171 !important;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 0.20rem #A6A6A6 !important;
+}
+
+input.btn.btn-primary {
+    background-color: #393939;
+    border: none;
+    margin-top: 5%;
+}
+
+.btn:hover {
+    background-color: #727071 !important;
+}
+
+dt {
+    margin-bottom: 15px !important;
+}
